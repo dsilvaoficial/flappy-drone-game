@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flappy Drone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="ui">
+    <canvas id="game" width="800" height="450"></canvas>
+
+    <div id="overlay" class="center">
+      <h1>FLAPPY DRONE</h1>
+      <p id="subtitle">Toque / clique / Espaço para subir</p>
+      <div class="buttons">
+        <button id="startBtn">Começar</button>
+        <button id="helpBtn">Como jogar</button>
+      </div>
+      <p id="bestScore">Melhor: 0</p>
+    </div>
+
+    <div id="pauseOverlay" class="center hidden">
+      <h2>Pausado</h2>
+      <p>Pressione P para continuar</p>
+    </div>
+
+    <div id="gameOver" class="center hidden">
+      <h2>Game Over</h2>
+      <p id="finalScore">Pontuação: 0</p>
+      <button id="restartBtn">Reiniciar</button>
+    </div>
+
+    <div id="helpModal" class="center hidden">
+      <h3>Como jogar</h3>
+      <ul>
+        <li>Pressione Espaço / Seta cima / Clique / Toque para subir</li>
+        <li>Evite os obstáculos.</li>
+        <li>A velocidade aumenta.</li>
+      </ul>
+      <button id="closeHelp">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Áudio -->
+  <audio id="introMusic" src="intro.mp3" loop preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: url("bg-menu.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter, sans-serif;
+}
+
+.menu {
+  background: rgba(0, 0, 0, 0.46);
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  color: #2CDE77;
+}
+
+button {
+  padding: 14px 32px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}

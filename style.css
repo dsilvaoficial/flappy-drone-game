@@ -1,0 +1,105 @@
+:root{
+  --bg: #8CFFFC;
+  --panel: #00000099;
+  --accent: #00ffea;
+  --danger: #ff0055;
+  --muted: #B3B2B2;
+}
+
+* { box-sizing: border-box; }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #e6eef6;
+  
+  background-image: url("bg-menu.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#ui {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+canvas {
+  border: 3px solid var(--accent);
+  background: #28BCFF;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 8px 30px rgba(0, 255, 230, 0.6);
+  image-rendering: optimizeSpeed;
+}
+
+/* overlays */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  padding: 18px;
+  border-radius: 12px;
+  background: var(--panel);
+  min-width: 260px;
+}
+
+#overlay h1 {
+  margin: 0 0 6px 0;
+  color: var(--accent);
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+#subtitle { margin-top: 0; color: var(--muted); font-size: 14px; }
+
+.buttons {
+  margin: 12px 0;
+  display: flex;
+  gap: 8px;
+  justify-content:center;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover { transform: translateY(-2px); transition: .12s; }
+
+.hidden { display: none; }
+
+/* small status bar on canvas */
+.status {
+  position: absolute;
+  left: 10%;
+  top: 6%;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* game over / help style reuses center block */
+#gameOver h2 { color: var(--danger); margin-bottom:6px; }
+#bestScore { margin-top: 8px; font-weight:700; color: var(--muted); }
+
+/* responsive tweaks */
+@media (max-width:700px){
+  #overlay h1 { font-size: 22px; }
+  canvas { width: 95vw; height: auto; }
+}
