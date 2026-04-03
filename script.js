@@ -503,3 +503,8 @@ function drawObstacles() {
 }, { once: true });
 
 })();
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/flappy-drone-game/sw.js")
+    .then(() => console.log("Service Worker registrado"));
+}
